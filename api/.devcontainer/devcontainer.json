@@ -1,0 +1,16 @@
+{
+  "name": "lambda_docker",
+  "context": "..",
+  "dockerFile": "../Dockerfile",
+  "remoteUser": "root",
+//   "mounts": [
+//       "source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+//   ],
+  "settings": {
+      "terminal.integrated.shell.linux": null
+  },
+  "runArgs": ["--privileged"],
+  "extensions": ["devadvice.serverlessconsole"],
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/var/task,type=bind,consistency=delegated",
+  "workspaceFolder": "/var/task"
+ }
