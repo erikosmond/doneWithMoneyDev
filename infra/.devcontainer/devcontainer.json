@@ -1,0 +1,13 @@
+{
+  "name": "terra_docker",
+  "context": "..",
+  "dockerFile": "../Dockerfile",
+  "remoteUser": "root",
+  "settings": {
+      "terminal.integrated.shell.linux": null
+  },
+  "runArgs": ["--privileged"],
+  "extensions": ["hashicorp.terraform"],
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/var,type=bind,consistency=delegated",
+  "workspaceFolder": "/var"
+ }
